@@ -1,1 +1,24 @@
+properties([disableConcurrentBuilds()])
+
+
+pipeline {
+    agent any
+        options {
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        timestamps()
+    }
+        stages {
+            stage('Build') {
+                steps {
+                    // Get some code from a GitHub repository
+                    git url: 'https://github.com/slavikpas/QA.git', branch: 'main'
+                    // Change file permisson
+                    //sh "chmod +x -R ./jenkins"
+                    // Run shell script
+                    // sh "./jenkins/script/scripted_pipeline_ex_2.sh"
+                }
+            }
+        }
+    }
+Footer
 
