@@ -1,19 +1,9 @@
-#!groovy
-// Check ub1 properties
-properties([disableConcurrentBuilds()])
-
 pipeline {
-    agent { 
-        label 'master'
-        }
-    options {
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
-        timestamps()
-    }
+    agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
     stages {
-        stage("First step") {
+        stage('build') {
             steps {
-                sh  'clear'
+                sh 'mvn --version'
             }
         }
     }
