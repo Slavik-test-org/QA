@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git url: 'https://github.com/naiveskill/devops.git', branch: 'main'
+                git url: 'https://github.com/slavikpas/QA.git', branch: 'main'
                 // Change file permisson
                 sh "chmod +x -R ./jenkins"
                 // Run shell script
