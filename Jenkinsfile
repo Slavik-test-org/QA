@@ -1,24 +1,12 @@
-#!groovy
-// Run docker build
-properties([disableConcurrentBuilds()])
-
 pipeline {
-    agent any
-    //triggers { pollSCM('* * * * *') }
-    options {
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
-        timestamps()
+    agent {
+        docker { image 'docker' }
     }
     stages {
-  
-        stage("create docker image") {
+        stage('Test') {
             steps {
-                echo " ============== start building image =================="
-                dir ('QA/docker/toolbox') {
-                	sh 'docker build -t . '
-                }
+                sh 'node --version'
             }
         }
-      
-        }
     }
+}
