@@ -14,28 +14,28 @@ pipeline {
                 }
             }
         }
-        stage('1-Build') {
+        // stage('1-Build') {
 
-            steps {
-                echo "Start of Stage Build"
-                echo "Building......."
-                sh   "python --version"
-                echo "End of Stage Build"
-            }
-        }
-        stage('2-Test') {
-            steps {
-                echo "Start of Stage Test"
-                echo "Tesgdfgting......."
-                echo "End of Stage Build"
-            }
-        }
-        stage('3-Deplo55y') {
-            steps {
-                echo "Start of Stage Deploy"
-                echo "Deployfffing......."
-                echo "End of Stage Buld......"
-            }
-        }
+        //     steps {
+        //         echo "Start of Stage Build"
+        //         echo "Building......."
+        //         sh   "python --version"
+        //         echo "End of Stage Build"
+        //     }
+        // }
+        // stage('2-Test') {
+        //     steps {
+        //         echo "Start of Stage Test"
+        //         echo "Tesgdfgting......."
+        //         echo "End of Stage Build"
+        //     }
+        // }
+        // stage('3-Deplo55y') {
+        //     steps {
+        //         echo "Start of Stage Deploy"
+        //         echo "Deployfffing......."
+        //         echo "End of Stage Buld......"
+        //     }
+        // }
    }
 }
