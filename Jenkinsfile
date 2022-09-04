@@ -17,7 +17,7 @@ pipeline {
                 echo "End of Stage Build"
             }
         }
-        stage('3-Deploy') {
+        stage('3-Deplo55y') {
             steps {
                 echo "Start of Stage Deploy"
                 echo "Deploying......."
