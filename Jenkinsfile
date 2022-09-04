@@ -1,8 +1,21 @@
+#!groovy
+
+properties([disableConcurrentBuilds()])
+
 pipeline {
     agent { docker { image 'python:3.7' } }
 
     stages {
+        stage("create docker image") {
+            steps {
+                echo " ============== start building image =================="
+                dir ('docker/toolbox') {
+                	sh 'docker build . '
+                }
+            }
+        }
         stage('1-Build') {
+
             steps {
                 echo "Start of Stage Build"
                 echo "Building......."
