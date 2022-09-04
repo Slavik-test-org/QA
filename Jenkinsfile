@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo "Start of Stage Deploy"
                 echo "Deploying......."
-                echo "End of Stage Build"
+                echo "End of Stage Buld......"
             }
         }
    }
