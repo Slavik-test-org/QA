@@ -12,6 +12,7 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('docker/toolbox') {
+                    sh 'sudo apt install make'
                 	sh 'docker build . '
                 }
             }
