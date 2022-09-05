@@ -3,9 +3,7 @@
 properties([disableConcurrentBuilds()])
 
 pipeline {
-    agent { 
-        label 'master'
-        }
+    agent any
     
     // { docker { image 'python:3.7' } }
     options {
