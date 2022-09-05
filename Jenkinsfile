@@ -5,7 +5,6 @@ properties([disableConcurrentBuilds()])
 pipeline {
     agent any
     
-    // { docker { image 'python:3.7' } }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         timestamps()
@@ -16,31 +15,9 @@ pipeline {
                 echo " ============== start building image =================="
                 dir ('docker/toolbox') {
                 	sh 'docker build . '
+                    sh "python --version"
                 }
             }
         }
-        // stage('1-Build') {
-
-        //     steps {
-        //         echo "Start of Stage Build"
-        //         echo "Building......."
-        //         sh   "python --version"
-        //         echo "End of Stage Build"
-        //     }
-        // }
-        // stage('2-Test') {
-        //     steps {
-        //         echo "Start of Stage Test"
-        //         echo "Tesgdfgting......."
-        //         echo "End of Stage Build"
-        //     }
-        // }
-        // stage('3-Deplo55y') {
-        //     steps {
-        //         echo "Start of Stage Deploy"
-        //         echo "Deployfffing......."
-        //         echo "End of Stage Buld......"
-        //     }
-        // }
    }
 }
