@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo " ============== start building image ==================="
                 dir ('docker/toolbox') {
-                	sh 'docker build -t Slavik-test-org/toolbox:latest . '
+                	sh 'docker build -t slavik/toolbox:latest . '
                     sh "python --version"
                 }
             }
