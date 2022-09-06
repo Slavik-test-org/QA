@@ -1,5 +1,2 @@
-slava
-bla bla
 
-
-some test
+print("Hello world")
