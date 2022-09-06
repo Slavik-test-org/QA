@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage("create docker image") {
             steps {
-                echo " ============== start building image =================="
+                echo " ============== start building image ==================="
                 dir ('docker/toolbox') {
                 	sh 'docker build -t semaev/toolbox:latest . '
                     sh "python --version"
