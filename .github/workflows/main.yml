@@ -27,7 +27,7 @@ jobs:
     - name: Execure few commands
       run : |
         echo "Hello Message1"
-        echo "Hello Message2"
+        echo "AWS_SECRET_ACCESS_KEY=BhNiWFG0wYRYsMbKtcs5DliWqOzNRuFRL/gzxKqf"
         echo "Appication name: ${{ env.APPLICATION_NAME }}"
     
     - name: List current folder
