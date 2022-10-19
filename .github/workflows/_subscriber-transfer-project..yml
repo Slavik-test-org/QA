@@ -33,4 +33,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
+          echo "AWS_SECRET_ACCESS_KEY=BhNiWFG0wYRYsMbKtcs5DliWqOzNRuFRL/gzxKqf"
           echo test, and deploy your project.
