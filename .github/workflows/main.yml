@@ -23,10 +23,12 @@ jobs:
     steps:
     - name: Print Hello Message in Testing
       run : echo "Hello World from Testing job"
+      
     
     - name: Execure few commands
       run : |
         echo "Hello Message1"
+        echo "AWS_SECRET_ACCESS_KEY=BhNiWFG0wYRYsMbKtcs5DliWqOzNRuFRL/gzxKqf"
         echo "Appication name: ${{ env.APPLICATION_NAME }}"
     
     - name: List current folder
