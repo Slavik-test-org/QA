@@ -1,16 +1,17 @@
-name: Greetings
-
-on: [pull_request_target, issues]
-
+name: My Workflow
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
-  greeting:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      pull-requests: write
     steps:
-    - uses: actions/first-interaction@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: "AWS_SECRET_ACCESS_KEY=H&DFDBFYUSFYU8"
-        pr-message: "Message that will be displayed on users' first pull request"
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build application 5
+        run: |
+          echo "AWS_SECRET_ACCESS_KEY=tMWgQXmAm1AsOpf396erDeV6LmY0i8Oz1+EA17sW"
