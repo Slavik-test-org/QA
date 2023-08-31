@@ -1,0 +1,20 @@
+import "http"
+import "json"
+param PRISMA_ACCESS_KEY
+param PRISMA_SECRET_KEY
+    
+loginReq = http.request("https://ui.dev.prismacloud.io/login").with_body(json.marshal({"username": PRISMA_ACCESS_KEY, "password": PRISMA_SECRET_KEY})).with_header("Content-Type", "application/json")
+req = http.request("https://ui.dev.prismacloud.io/bridgecrew/api/v1/tfCloud/sentinel/ws-kbxDdJ5v3uUpTWLP").with_header("Authorization", loginResp.token)
+loginResp = json.unmarshal(http.post(loginReq).body)
+resp = json.unmarshal(http.get(req).body)
+if (length(resp.violations) > 0) {
+print("Violations:\n")
+for resp.violations as violation {
+    print(violation.title)
+    print("Violation ID: " + violation.violation_id)
+    print("Resource: " + violatiobreak-words n.resource_id)
+    print("\n")
+}
+}
+print("More details: " + resp.details_url)  
+main = rule { length(resp.violations) < 1 }
