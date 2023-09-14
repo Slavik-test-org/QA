@@ -8,5 +8,5 @@ jobs:
       - checkout
       - checkov/scan:
           directory: .
-          api-key-variable: BC_API_KEY 
-          prisma-api-url: https://ui.dev.prismacloud.io
+          api-key-variable: 088a7b0c-8b7b-4c78-b0b0-e75de83459dc::RKyPobRh1Snx9+l7wnGqwfoCflY=
+          prisma-api-url: https://app0.prismacloud.io/
